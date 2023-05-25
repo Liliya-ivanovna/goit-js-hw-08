@@ -37,3 +37,4 @@ ulEl.addEventListener("keydown",(event) =>{
  }
 
 
+ import SimpleLightbox from "simplelightbox";

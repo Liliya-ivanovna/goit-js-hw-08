@@ -19,7 +19,7 @@ function createGalleryMarkUp(items){
 }
 const addGalleryMarkUp = createGalleryMarkUp(galleryItems);
 ulEl.innerHTML = addGalleryMarkUp;
-var lightbox = $('.gallery a').simpleLightbox({ /* options */ });
+var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 
 
  

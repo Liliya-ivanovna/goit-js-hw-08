@@ -1,3 +1,5 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
@@ -17,24 +19,7 @@ function createGalleryMarkUp(items){
 }
 const addGalleryMarkUp = createGalleryMarkUp(galleryItems);
 ulEl.innerHTML = addGalleryMarkUp;
-ulEl.addEventListener("click",onGalleryItemClick);
-function onGalleryItemClick(event){
-    event.preventDefault();
-    if(event.target.nodeName !== "IMG"){
-        return;
-    }
-     const instance = basicLightbox.create(`<img src=
-      "${event.target.dataset.source}"
-       width="800" height ="600"/>`);
-      instance.show();
-
-ulEl.addEventListener("keydown",(event) =>{
-   if(event.code === "Escape"){
-    document.removeEventListener("keydown",event);
-    instance.close();
-   }  
- });
- }
+var lightbox = $('.gallery a').simpleLightbox({ /* options */ });
 
 
- import SimpleLightbox from "simplelightbox";
+ 

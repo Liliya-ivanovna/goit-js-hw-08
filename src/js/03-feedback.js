@@ -1,7 +1,7 @@
 
 const formEl = document.querySelector('.feedback-form');
 const emailEl = document.getElementsByName("email");
-const msgEl = document.getElementsByName("message");
+//const msgEl = document.getElementsByName("message");
 console.log(emailEl)
 formEl.addEventListener('submit',onFormSubmit);
 //emailEl.addEventListener('input',onTextInput);

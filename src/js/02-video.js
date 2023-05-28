@@ -1,6 +1,6 @@
 import Player from '@vimeo/player';
-const idPlayer = document.getElementById('vimeo-player');
-const player = new Player(idPlayer);
+const player = document.getElementById('vimeo-player');
+console.log(player);
 const onPlay = function() {
     duration: 61.857
     percent: 0.049

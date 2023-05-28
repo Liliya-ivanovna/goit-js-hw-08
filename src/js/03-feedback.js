@@ -20,7 +20,6 @@ function onFormSubmit(evt){
 evt.preventDefault();
 evt.currentTarget.reset();
 localStorage.removeItem(STORAGE_KEY);
-
-console.log(formInputs)
+console.log(formInputs);
 }
 

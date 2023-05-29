@@ -18,7 +18,12 @@ function createGalleryMarkUp(items){
 }
 const addGalleryMarkUp = createGalleryMarkUp(galleryItems);
 ulEl.innerHTML = addGalleryMarkUp;
-const lightbox = new SimpleLightbox('.gallery a');
+let lightbox = new SimpleLightbox('.gallery a', { 
+   captionDelay:250,
+   captionsData: "alt",
+   enableKeyboard: true,
+   close: true,
+});
 ulEl.addEventListener("click",onGalleryItemClick);
 function onGalleryItemClick(event){
    event.preventDefault();
@@ -38,10 +43,4 @@ document.removeEventListener(keydown,this.handler)
 },
 });
 instance.show();
-ulEl.addEventListener("keydown",(event) =>{
-  if(event.code === "Escape"){
-   document.removeEventListener("keydown",event);
-   instance.close();
-  }  
-});
 };

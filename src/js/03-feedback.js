@@ -17,6 +17,7 @@ function savedInputsValue(){
 savedInputsValue();
 formEl.addEventListener('submit',onFormSubmit);
 function onFormSubmit(evt){
+console.clear();
 evt.preventDefault();
 evt.currentTarget.reset();
 localStorage.removeItem(STORAGE_KEY);
